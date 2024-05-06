@@ -1,0 +1,67 @@
+<!-- Page 1: Form to Store User Input -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Enter</title>
+    <a href="page1.html">Fill Out Survey</a>
+    <a href="page2.html">: View Survey Result</a>
+    
+</head>
+<body>
+    <form id="userForm" action="javascript:void(0);">
+        <label  for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <br>
+        <br>
+        <label    for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <br>
+        <br>
+        <label       for="dob">Date of birth:</label>
+        <input type="number" id="dob" name="dob" required>
+        <br>
+        <br>
+        <br>
+        <label    for="number">Contact Number:</label>
+        <input type="number" id="number" name="number" required>
+        <br>
+        <br>
+        <br>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <br>
+        <br>
+        <br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <br>
+        <br>
+        <br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I have a boat</label>
+        <br>
+        <br>
+        <br>
+        <button onclick="saveData()">Submit</button>
+    </form>
+    
+
+    <script>
+        function saveData() {
+            localStorage.setItem('username', document.getElementById('username').value);
+            localStorage.setItem('email', document.getElementById('email').value);
+            localStorage.setItem('number', document.getElementById('number').value);
+            localStorage.setItem('dob', document.getElementById('dob').value);
+            localStorage.setItem('vehicle1', document.getElementById('vehicle1').value);
+        }
+    </script>
+</body>
+</html>
+
+
